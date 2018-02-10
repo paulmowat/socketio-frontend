@@ -1,0 +1,12 @@
+<div class="message-container">
+    <h1>Messages from Server</h1>
+    <p *ngFor="let message of messages">
+      <ngb-alert [type]="message.type" (close)="closeMessage(message)">
+        <strong>Message</strong> {{message.content}}
+      </ngb-alert>
+    </p>
+    <p>
+      <button type="button" class="btn btn-primary" (click)="reset()">Reset</button>
+    </p>
+    
+</div>
